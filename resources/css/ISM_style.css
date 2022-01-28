@@ -53,6 +53,11 @@ header {
 	width: 100%;
 }
 
+
+#header_section {                            /*new styling here - height specified for main section*/
+	height: 7.1vw;
+}
+
 header h1, header span {
 	font-family: Edmundsbury, sans-serif;
 	font-style: normal;
@@ -89,6 +94,9 @@ img#hamburger {
 
 /*navigation styling*/
 nav {
+	position: fixed;
+	top: 7.1vw;      /*new styling*/
+	height: 2.4vw;      /*new styling*/
 	background-color: #584632;
 	text-align: center;
 	width: 100%;
@@ -131,7 +139,7 @@ ul li ul {
 	font-style: normal;
 	font-weight: 100;
 	position: absolute;
-	top: 1.9vw;
+	top: 2.1vw;                         /*styling changed from 1.9vw to 2.1vw*/
 	left: 2vw;
 	visibility: hidden;
 }
@@ -189,9 +197,7 @@ ul li ul li a:active {
 	ul li {
 		font-size: 1.2vw;
 	}
-	ul li ul {
-		top: 2.1vw;
-	}
+	                                          /*top 2.1vw removed as redundant*/
 	ul li ul li {
 		width: 13vw;
 	}
@@ -202,21 +208,33 @@ ul li ul li a:active {
 
 /*header & nav styling exceptions for tablets*/
 @media only screen and (max-width: 1024px) {
+	
+	#header_section {                            /*new styling here - height specified for main section*/
+	height: 8.5vw;
+	}
   header h1, header span {
-		font-size: 2.8vw;
+		font-size: 3.2vw;                          /*changed from 2.8vw to */
 	}
 	img#headerLogoBigScreen {	
 		top: 2.7vw;
 		width: 6vw;
 	}
+	
+	nav {                                     /*new nav data*/
+		top: 8.5vw;
+		height: 3vw;
+	}
+	
 	ul li {
-		font-size: 1.3vw;
+		font-size: 1.7vw;                    /*changed from 1.3vw to*/
+		padding: .8vw 2.5vw .6vw 2.5vw;
 	}
 	ul li ul {
-		top: 2.2vw;
+		top: 2.7vw;														/*new value*/
+		left: 2.5vw;                             /*new value*/
 	}
 	ul li ul li {
-		width: 14vw;
+		width: 18vw;                             /*changed from 14vw to */
 	}
 	img#arrow1, img#arrow2 {
 		width: .8vw;
@@ -224,7 +242,10 @@ ul li ul li a:active {
 }
 
 /*header & nav styling exceptions for mobiles*/
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:700px) {
+	#header_section {                            /*new styling here - height specified for main section*/
+		height: 32vw;
+	}
 	header h1, header span {
 		display: block;
 		font-size: 6vw;
@@ -253,9 +274,10 @@ ul li ul li a:active {
 	nav {
 		position: absolute;
 		top: 34vw;
-		left: 60vw;
+		left: 50vw;
 		text-align: left;
-		width: 40%;
+		width: 50%;
+		height: auto;
 		visibility: hidden;
 	}
 	ul {
@@ -263,7 +285,7 @@ ul li ul li a:active {
 	}
 	ul li {
 		display: block;
-		font-size: 4vw;
+		font-size: 4.5vw;
 		padding-top: 3vw;
 		padding-bottom: 3vw;
 		border-top: 1px solid #fff;
@@ -291,15 +313,17 @@ ul li ul li a:active {
 		padding-bottom: .4vw;
 		position: absolute;
 		top: -11.6vw;
-		left: -45vw;
+		left: -50vw;
+	}
+	ul li ul#dropDown1 {
+		top: -12.5vw;
 	}
 	ul li ul#dropDown2 {
-		top: -22.6vw;
+		top: -24.2vw;
 	}
 	ul li ul li {
-		width: 45vw;
+		width: 50vw;
 		display: block;
-		font-size: 4vw;
 		background-color: rgba(233, 152, 47, 1);
 		color: white;
 		text-align: left;
@@ -313,12 +337,19 @@ ul li ul li a:active {
 main {
 	background-color: #fafafa;
 	position: relative;
-	top: 8.8vw;
+	top: 9.5vw;              /*new styling here - changed from 8.8vw to 9.5vw*/
 	left: 0vw;
 }
 
+/*main section styling exceptions for tablets*/
+@media only screen and (max-width:1024px) {             /*new main styling added*/
+	main {
+		top: 11.5vw;
+	}	
+}
+
 /*main section styling exceptions for mobiles*/
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:700px) {
 	main {
 		top: 34vw;
 	}	
@@ -400,7 +431,7 @@ main {
 }
 
 /*main image exceptions for mobiles*/	
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
 	#stage_pc, #stage_tablet {
 		display: none;
 	}
@@ -451,8 +482,8 @@ span#wiki-link {
 	display: inline-block;
 }
 span#wiki-link a {
-	text-decoration: none;
-	font-size: 1.2rem;
+		text-decoration: none;
+		font-size: 1.2rem;
 }
 span#wiki-link a:link, span#wiki-link a:visited {
 	color: blue;
@@ -475,7 +506,7 @@ span#wiki-link a:hover {
 	}
 }
 
-/*article stylingexceptions for mobiles*/	
+/*article stylingexceptions for mobiles portrait*/	
 @media only screen and (max-width: 480px) {
 	article#about_us {
 		width: 90%;
@@ -533,7 +564,7 @@ p#footer_line1 {
 }
 
 /*footer styling exceptions for mobiles*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
 	img#footerLogo {
 		width: 8vw;
 		padding-top: 1.3vw;
