@@ -1,6 +1,6 @@
 //declare global variables
-const wideScreen = window.matchMedia('(min-width: 701px)')
-const mobScreen = window.matchMedia('(max-width: 700px)')
+const wideScreen = window.matchMedia('(min-width: 481px)')
+const mobScreen = window.matchMedia('(max-width: 480px)')
 
 const nav = document.getElementById("navBar");
 
@@ -29,7 +29,7 @@ const showItem = document.getElementById("show_item");
 const closeItems = [headerSection, mainSection, homeItem, eventsItem, commItem, showItem];
 
 
-// For viewports of minimum width 701px, navigation element to be permanently visible
+// For viewports of minimum width 481px, navigation element to be permanently visible
 function handleTabletChange(e) {
   if (e.matches) {
     nav.style.visibility = "visible";		
@@ -37,7 +37,7 @@ function handleTabletChange(e) {
 }
 wideScreen.addListener(handleTabletChange)
 
-// For viewports of max width 700px, navigation element to be hidden, menu icon to be visible
+// For viewports of max width 480px, navigation element to be hidden, menu icon to be visible
 function handleMobChange(e) {
   if (e.matches) {
     nav.style.visibility = "hidden";
@@ -47,7 +47,7 @@ function handleMobChange(e) {
 mobScreen.addListener(handleMobChange)
 
 
-//For viewports of minimum width 701px, nested list dropdown to be visible, navigation list text and arrow to display as orange
+//For viewports of minimum width 481px, nested list dropdown to be visible, navigation list text and arrow to display as orange
 function showDropDown(item, dropdown, arrow, linkEl) {
 	item.addEventListener("mouseover", function() {
 		if (wideScreen.matches) {
@@ -60,7 +60,7 @@ function showDropDown(item, dropdown, arrow, linkEl) {
 showDropDown(eventsItem, dropDown1, arrow1, linkEl1);
 showDropDown(commItem, dropDown2, arrow2, linkEl2);
 
-//For viewports of minimum width 701px, nested list dropdown to be hidden, navigation list text and arrow to display as white
+//For viewports of minimum width 481px, nested list dropdown to be hidden, navigation list text and arrow to display as white
 function hideDropDown(item, dropdown, arrow, linkEl) {
 	item.addEventListener("mouseout", function() {
 		if (wideScreen.matches) {
@@ -73,14 +73,14 @@ function hideDropDown(item, dropdown, arrow, linkEl) {
 hideDropDown(eventsItem, dropDown1, arrow1, linkEl1);
 hideDropDown(commItem, dropDown2, arrow2, linkEl2);
 
-//For viewports of maximum width 700px, set all dropdowns to "hidden" from initialisation
+//For viewports of maximum width 480px, set all dropdowns to "hidden" from initialisation
 if (mobScreen.matches) {
 	dropDown1.style.visibility = "hidden";
 	dropDown2.style.visibility = "hidden";
 	nav.style.visibility = "hidden";
 }
 	
-//For viewports of maximum width 700px, toggle navigation list between visible and hidden
+//For viewports of maximum width 480px, toggle navigation list between visible and hidden
 function displayNav() {
 	hamburger.addEventListener("click", function() {
 		if (mobScreen.matches) {
@@ -97,7 +97,7 @@ function displayNav() {
 }
 displayNav();
 
-//for For viewports of maximum width 700px, toggle nested list dropdown to be visible/hidden, navigation list text and arrow to display as orange/white
+//for For viewports of maximum width 480px, toggle nested list dropdown to be visible/hidden, navigation list text and arrow to display as orange/white
 function toggleMobileDropDown(item, dropdown, arrow, linkEl) {
 	item.addEventListener("click", function() {	
 		if (mobScreen.matches) {
@@ -117,7 +117,7 @@ function toggleMobileDropDown(item, dropdown, arrow, linkEl) {
 toggleMobileDropDown(eventsItem, dropDown1, mobileArrow1, linkEl1);
 toggleMobileDropDown(commItem, dropDown2, mobileArrow2, linkEl2);
 
-//For viewports of maximum width 700px, hide nested list by clicking on defined DOM elements
+//For viewports of maximum width 480px, hide nested list by clicking on defined DOM elements
 function hideMobileDropDown(item, dropdown, arrow, linkEl, exception) {	
 	for (let i = 0; i < item.length; i++) {
 		if (item[i] === exception) {

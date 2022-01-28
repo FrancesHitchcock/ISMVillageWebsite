@@ -54,7 +54,7 @@ header {
 }
 
 
-#header_section {                            /*new styling here - height specified for main section*/
+#header_section {                           
 	height: 7.1vw;
 }
 
@@ -95,8 +95,8 @@ img#hamburger {
 /*navigation styling*/
 nav {
 	position: fixed;
-	top: 7.1vw;      /*new styling*/
-	height: 2.4vw;      /*new styling*/
+	top: 7.1vw;     
+	height: 2.4vw;      
 	background-color: #584632;
 	text-align: center;
 	width: 100%;
@@ -139,7 +139,7 @@ ul li ul {
 	font-style: normal;
 	font-weight: 100;
 	position: absolute;
-	top: 2.1vw;                         /*styling changed from 1.9vw to 2.1vw*/
+	top: 2.1vw;                        
 	left: 2vw;
 	visibility: hidden;
 }
@@ -196,8 +196,7 @@ ul li ul li a:active {
 	}
 	ul li {
 		font-size: 1.2vw;
-	}
-	                                          /*top 2.1vw removed as redundant*/
+	}                                         
 	ul li ul li {
 		width: 13vw;
 	}
@@ -207,43 +206,74 @@ ul li ul li a:active {
 }
 
 /*header & nav styling exceptions for tablets*/
-@media only screen and (max-width: 1024px) {
-	
-	#header_section {                            /*new styling here - height specified for main section*/
+@media only screen and (max-width: 1024px) {	
+	#header_section {                           
 	height: 8.5vw;
 	}
   header h1, header span {
-		font-size: 3.2vw;                          /*changed from 2.8vw to */
+		font-size: 3.2vw;                          
 	}
 	img#headerLogoBigScreen {	
 		top: 2.7vw;
 		width: 6vw;
-	}
-	
-	nav {                                     /*new nav data*/
+	}	
+	nav {                                     
 		top: 8.5vw;
 		height: 3vw;
 	}
-	
 	ul li {
-		font-size: 1.7vw;                    /*changed from 1.3vw to*/
+		font-size: 1.7vw;                   
 		padding: .8vw 2.5vw .6vw 2.5vw;
 	}
 	ul li ul {
-		top: 2.7vw;														/*new value*/
-		left: 2.5vw;                             /*new value*/
+		top: 2.7vw;														
+		left: 2.5vw;                             
 	}
 	ul li ul li {
-		width: 18vw;                             /*changed from 14vw to */
+		width: 18vw;                             
 	}
 	img#arrow1, img#arrow2 {
-		width: .8vw;
+		width: 1vw;
 	}	
 }
 
-/*header & nav styling exceptions for mobiles*/
+/*header & nav styling exceptions for mobiles landscape*/
 @media only screen and (max-width:700px) {
-	#header_section {                            /*new styling here - height specified for main section*/
+	#header_section {                           
+	height: 10vw;
+	}
+  header h1, header span {
+		font-size: 4vw;
+	}
+	img#headerLogoBigScreen {	
+		top: 2vw;
+		width: 8vw;
+	}	
+	nav {                                     
+		top: 10vw;
+		height: 4.5vw;
+	}
+	ul {
+		margin-top: 0.3vw;
+	}
+	ul li {
+		font-size: 2.3vw;                   
+	}
+	ul li ul {
+		top: 3.2vw;														
+		left: 2.5vw;                             
+	}
+	ul li ul li {
+		width: 24vw;                             
+	}
+	img#arrow1, img#arrow2 {
+		width: 1.2vw;
+	}
+}
+
+/*header & nav styling exceptions for mobiles*/
+@media only screen and (max-width:480px) {
+	#header_section {                            
 		height: 32vw;
 	}
 	header h1, header span {
@@ -337,19 +367,26 @@ ul li ul li a:active {
 main {
 	background-color: #fafafa;
 	position: relative;
-	top: 9.5vw;              /*new styling here - changed from 8.8vw to 9.5vw*/
+	top: 9.5vw;              
 	left: 0vw;
 }
 
 /*main section styling exceptions for tablets*/
-@media only screen and (max-width:1024px) {             /*new main styling added*/
+@media only screen and (max-width:1024px) {             
 	main {
 		top: 11.5vw;
 	}	
 }
 
-/*main section styling exceptions for mobiles*/
+/*main section styling exceptions for mobiles landscape*/
 @media only screen and (max-width:700px) {
+	main {
+		top: 14.5vw;
+	}	
+}
+
+/*main section styling exceptions for mobiles*/
+@media only screen and (max-width:480px) {
 	main {
 		top: 34vw;
 	}	
@@ -360,23 +397,19 @@ main {
 		width: 100%;
 		height: 40vw;
 		margin: 0 auto 0 auto;
-  }
-	
+  }	
 	#stage_tablet {
 		display: none;
 	}
-	
 	#stage_mobile {
 		display: none;
 	}
-
   #stage_pc img {
 		position: absolute;
 		width: 100%;
 		height: 40vw;
 		background: #fff;
   }
-
   #stage_pc img:nth-of-type(1) {
     animation-name: fader;
     animation-delay: 4s;
@@ -430,7 +463,7 @@ main {
 	to   { opacity: 0.0; }
 }
 
-/*main image exceptions for mobiles*/	
+/*main image exceptions for mobiles portrait and landscape*/	
 @media only screen and (max-width: 700px) {
 	#stage_pc, #stage_tablet {
 		display: none;
@@ -506,7 +539,7 @@ span#wiki-link a:hover {
 	}
 }
 
-/*article stylingexceptions for mobiles portrait*/	
+/*article stylingexceptions for mobiles*/	
 @media only screen and (max-width: 480px) {
 	article#about_us {
 		width: 90%;
@@ -564,7 +597,7 @@ p#footer_line1 {
 }
 
 /*footer styling exceptions for mobiles*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
 	img#footerLogo {
 		width: 8vw;
 		padding-top: 1.3vw;
