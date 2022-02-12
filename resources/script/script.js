@@ -37,8 +37,8 @@ function handleTabletChange(e) {
 		dropDown2.style.visibility = "hidden";
 		linkEl1.style.color = "white";
 		linkEl2.style.color = "white";
-		arrow1.src = "resources/images/arrow.png";
-		arrow2.src = "resources/images/arrow.png";
+		arrow1.src = "resources/images/arrow_blank.png";
+		arrow2.src = "resources/images/arrow_blank.png";
   }
 }
 wideScreen.addListener(handleTabletChange)
@@ -49,6 +49,10 @@ function handleMobChange(e) {
     nav.style.visibility = "hidden";
 		dropDown1.style.visibility = "hidden";
 		dropDown2.style.visibility = "hidden";
+		linkEl1.style.color = "white";
+		linkEl2.style.color = "white";
+		mobileArrow1.src = "resources/images/mobile_arrow_blank.png";
+		mobileArrow2.src = "resources/images/mobile_arrow_blank.png";
 		hamburger.src = "resources/images/hamburger.png";		
   }
 }
