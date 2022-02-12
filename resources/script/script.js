@@ -32,7 +32,13 @@ const closeItems = [headerSection, mainSection, homeItem, eventsItem, commItem, 
 // For viewports of minimum width 481px, navigation element to be permanently visible
 function handleTabletChange(e) {
   if (e.matches) {
-    nav.style.visibility = "visible";		
+    nav.style.visibility = "visible";	
+		dropDown1.style.visibility = "hidden";
+		dropDown2.style.visibility = "hidden";
+		linkEl1.style.color = "white";
+		linkEl2.style.color = "white";
+		arrow1.src = "resources/images/arrow.png";
+		arrow2.src = "resources/images/arrow.png";
   }
 }
 wideScreen.addListener(handleTabletChange)
@@ -41,6 +47,8 @@ wideScreen.addListener(handleTabletChange)
 function handleMobChange(e) {
   if (e.matches) {
     nav.style.visibility = "hidden";
+		dropDown1.style.visibility = "hidden";
+		dropDown2.style.visibility = "hidden";
 		hamburger.src = "resources/images/hamburger.png";		
   }
 }

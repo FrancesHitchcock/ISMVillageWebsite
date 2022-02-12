@@ -260,7 +260,7 @@ ul li ul li a:active {
 		font-size: 2.3vw;                   
 	}
 	ul li ul {
-		top: 3.2vw;														
+		top: 3vw; /*changed from 3.2vw*/
 		left: 2.5vw;                             
 	}
 	ul li ul li {
@@ -342,7 +342,7 @@ ul li ul li a:active {
 		padding-top: .4vw;
 		padding-bottom: .4vw;
 		position: absolute;
-		top: -11.6vw;
+		top: -11.8vw; /*changed from -11.6vw*/
 		left: -50vw;
 	}
 	ul li ul#dropDown1 {
