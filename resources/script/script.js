@@ -16,9 +16,6 @@ const linkEl2 = document.getElementById("comm_link");
 const eventsItem = document.getElementById("events_item");
 const commItem = document.getElementById("comm_item");
 
-const homeItem = document.getElementById("home_item");
-const showItem = document.getElementById("show_item");
-
 const mobileArrow1 = document.getElementById("mobile_arrow1");
 const mobileArrow2 = document.getElementById("mobile_arrow2");
 
@@ -26,6 +23,7 @@ const hamburger = document.getElementById("hamburger");
 
 const headerSection = document.getElementById("header_section");
 const mainSection = document.getElementById("main_section");
+
 const homeItem = document.getElementById("home_item");
 const showItem = document.getElementById("show_item");
 
