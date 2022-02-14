@@ -16,6 +16,9 @@ const linkEl2 = document.getElementById("comm_link");
 const eventsItem = document.getElementById("events_item");
 const commItem = document.getElementById("comm_item");
 
+const homeItem = document.getElementById("home_item");
+const showItem = document.getElementById("show_item");
+
 const mobileArrow1 = document.getElementById("mobile_arrow1");
 const mobileArrow2 = document.getElementById("mobile_arrow2");
 
@@ -37,6 +40,8 @@ function handleTabletChange(e) {
 		dropDown2.style.visibility = "hidden";
 		linkEl1.style.color = "white";
 		linkEl2.style.color = "white";
+		homeItem.style.color = "white";
+		showItem.style.color = "white";
 		arrow1.src = "resources/images/arrow_blank.png";
 		arrow2.src = "resources/images/arrow_blank.png";
   }
