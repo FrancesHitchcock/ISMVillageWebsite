@@ -422,17 +422,6 @@ main {
 #stage_pc img:nth-of-type(n+3) {
 	display: none;
 }
-/*
-#stage_pc_pages:before {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 40vw;
-	background: rgba(255, 255, 255, .7);
-}
-*/
 	
 /*fade in-out gallery exceptions for tablets*/	
 @media only screen and (max-width: 1024px) {
@@ -548,13 +537,13 @@ div.info-table td {
 @media only screen and (max-width: 480px) {
 	div.info-table {
 		width: 90%;
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 	div.info-table table {
 		width: 100%;
 	}
 	div.info-table caption {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 	div.info-table td {
 		padding: 3px;
