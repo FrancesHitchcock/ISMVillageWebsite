@@ -537,7 +537,7 @@ div.info-table td {
 @media only screen and (max-width: 480px) {
 	div.info-table {
 		width: 90%;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 	}
 	div.info-table table {
 		width: 100%;
@@ -548,6 +548,7 @@ div.info-table td {
 	div.info-table td {
 		padding: 3px;
 		padding-left: 5px;
+		vertical-align: bottom;
 	}	
 }
 
