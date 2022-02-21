@@ -101,6 +101,7 @@ nav {
 	text-align: center;
 	width: 100%;
 	z-index: 100;
+	padding-top: .1vw;
 }
 
 ul {
@@ -135,11 +136,11 @@ img#mobile_arrow1, img#mobile_arrow2 {
 ul li ul {
 	padding-top: .4vw;
 	padding-bottom: .4vw;
-	font-family: acumin-pro, sans-serif;
+	font-family: Acumin-pro, sans-serif;
 	font-style: normal;
 	font-weight: 100;
 	position: absolute;
-	top: 2.1vw;                        
+  top: 2.1vw;	
 	left: 2vw;
 	visibility: hidden;
 }
@@ -194,6 +195,7 @@ ul li ul li a:active {
 		top: 2.5vw;
 		width: 5vw;
 	}
+
 	ul li {
 		font-size: 1.2vw;
 	}                                         
@@ -219,14 +221,14 @@ ul li ul li a:active {
 	}	
 	nav {                                     
 		top: 8.5vw;
-		height: 3vw;
+		height: 3.2vw;
 	}
 	ul li {
 		font-size: 1.7vw;                   
 		padding: .8vw 2.5vw .6vw 2.5vw;
 	}
 	ul li ul {
-		top: 2.7vw;														
+		top: 2.9vw;
 		left: 2.5vw;                             
 	}
 	ul li ul li {
@@ -482,7 +484,7 @@ main {
 
 /*table styling*/
 div.info-table {
-	width: 750px;
+	width: 44%;
 	font-family: Acumin-pro, sans-serif;
 	font-size: 1.5rem;
 	position: relative;
@@ -499,7 +501,19 @@ hr {
 
 
 div.info-table table {
-	width: 750px;
+	width: 100%;
+}
+
+td.time {
+	width: 20%;
+}
+
+td.service {
+	width: 40%;
+}
+
+td.church {
+	width: 40%;
 }
 
 div.info-table caption {
@@ -513,13 +527,34 @@ div.info-table caption {
 div.info-table td {
 	padding: 5px;
 	padding-left: 10px;
+
+}
+
+td.date {
+	font-weight: bold;
+}
+
+td.emptyRow {
+	height: .5rem;
+
+}
+
+td:not(.emptyRow) {
+	border: 1px solid #abcacd;
+}
+
+/*table styling exceptions for laptops*/
+@media only screen and (max-width: 1600px) {
+	div.info-table {
+		width: 60%;
+	}
 }
 
 /*table styling exceptions for tablets*/
 @media only screen and (max-width: 1024px) {
 	div.info-table {
 		width: 80%;
-		font-size: 2.5vw;
+		font-size: 1.5rem;
 	}
 	hr {
 	border: 1px solid rgba(233, 152, 47, 1);
@@ -534,6 +569,7 @@ div.info-table td {
 	div.info-table td {
 		padding: 3px;
 		padding-left: 5px;
+		font-size: 1.3rem;
 	}	
 }
 
@@ -541,7 +577,7 @@ div.info-table td {
 @media only screen and (max-width: 480px) {
 	div.info-table {
 		width: 90%;
-		font-size: 0.7rem;
+		font-size: 1rem;
 	}	
 	hr {
 	margin-bottom: 5vw;
@@ -560,11 +596,11 @@ div.info-table td {
 }
 
 /*article styling*/  
-article#about_us, article#about_church {
+.main_article {
 	width: 44%;
 	margin: 2rem auto 2rem auto;
 	color: #697331;
-	font-family: baker-signet-web, serif;	
+	font-family: Acumin-pro, sans-serif;	
 }
 article h2 {
 	margin-bottom: 1rem;
@@ -579,8 +615,11 @@ article h2 {
 article p {
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
-	font-family: acumin-pro, sans-serif;
+	font-family: Acumin-pro, sans-serif;
 	color: #584632;
+	line-height: 1;
+	line-height: 1.2;
+	
 }
 span.first_word {
 	color: #e9982f;
@@ -593,8 +632,9 @@ span.article-link {
 	display: inline-block;
 }
 span.article-link a {
-		text-decoration: none;
-		font-size: 1.2rem;
+		text-decoration: underline;
+		font-size: 1.5rem;
+		font-family: Acumin-pro, sans-serif;
 }
 span.article-link a:link, span.article-link a:visited {
 	color: blue;
@@ -613,22 +653,25 @@ span#wiki-link {
   
 /*article styling exceptions for laptops*/
 @media only screen and (max-width: 1600px) {
-	article#about_us, article#about_church {
+	.main_article {
 		width: 60%;
 	}
 }
 
 /*article styling exceptions for tablets*/
 @media only screen and (max-width: 1024px) {
-	article#about_us, article#about_church {
+	.main_article {
 		width: 80%;
 	}
 }
 
 /*article stylingexceptions for mobiles*/	
 @media only screen and (max-width: 480px) {
-	article#about_us, article#about_church {
+	.main_article {
 		width: 90%;
+	}
+	article p, article h2, span.article-link a {
+		font-size: 1rem;
 	}	
 }
 
