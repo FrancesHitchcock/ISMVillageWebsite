@@ -12,6 +12,7 @@
 	
 	slideShow("stage_pc");
 	slideShow("stage_tablet");
+  slideShow("stage_mobile");
 	
 
 
