@@ -274,8 +274,8 @@ ul li ul li a:active {
 	}
 }
 
-/*header & nav styling exceptions for mobiles*/
-@media only screen and (max-width:480px) {               
+/*header & nav styling exceptions for mobiles portrait*/
+@media only screen and (max-width:480px) {                /*mobile*/          
 	#header_section {                            
 		height: 32vw;
 	}
@@ -390,8 +390,8 @@ main {
 	}	
 }
 
-/*main section styling exceptions for mobiles*/
-@media only screen and (max-width:480px) {         
+/*main section styling exceptions for mobiles portrait*/
+@media only screen and (max-width:480px) {               /*mobile*/      
 	main {
 		top: 34vw;
 	}	
@@ -476,14 +476,10 @@ div.newsletter_background_pc {
 	}
 }
 
-/*image fade*/
-@keyframes fader {
-	from { opacity: 1.0; }
-	to   { opacity: 0.0; }
-}
 
-/*main image exceptions for mobiles portrait*/	
-@media only screen and (max-width: 480px) {               
+
+/*fade in-out gallery exceptions for mobiles portrait*/	
+@media only screen and (max-width: 480px) {                           /*mobile*/            
 	#stage_pc, #stage_pc_pages, #stage_tablet, #stage_tablet_pages {
 		display: none;
 	}
@@ -493,10 +489,25 @@ div.newsletter_background_pc {
 		height: 90vw;
 		margin: 0 auto 0 auto;
 	}
+	
 	#stage_mobile img {
+		position: absolute;
 		width: 100%;
 		height: 90vw;
-	}
+		background: #fff;
+  }
+  #stage_mobile img:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+  }
+  #stage_mobile img:nth-of-type(2) {
+    z-index: 10;
+  }
+  #stage_mobile img:nth-of-type(n+3) {
+    display: none;
+  }
 	
 	div.newsletter_background_mobile {
 	background-image: url("../images/flower_field_mobile.jpg");
@@ -504,6 +515,12 @@ div.newsletter_background_pc {
   background-size: cover; 
 	background-color: white;
 	}
+}
+
+/*image fade*/
+@keyframes fader {
+	from { opacity: 1.0; }
+	to   { opacity: 0.0; }
 }
 
 /*table styling*/
@@ -596,8 +613,8 @@ td:not(.emptyRow) {
 	}	
 }
 
-/*table styling exceptions for mobiles*/	
-@media only screen and (max-width: 480px) { 
+/*table styling exceptions for mobiles portrait*/	
+@media only screen and (max-width: 480px) {                       /*mobile*/ 
 	div.info-table {
 		width: 90%;
 		font-size: 1.2rem;
@@ -710,9 +727,7 @@ img.border-image {
 @media only screen and (max-width: 1600px) {
 	.main_article {
 		width: 60%;
-	}
-
-	
+	}	
 }
 
 /*article styling exceptions for tablets*/
@@ -736,7 +751,7 @@ img.border-image {
 }
 
 /*article styling exceptions for mobiles*/	
-@media only screen and (max-width: 480px) {                        
+@media only screen and (max-width: 480px) {                         /*mobile*/              
 	.main_article {
 		width: 90%;
 	}
@@ -810,7 +825,7 @@ p#footer_line1 {
 }
 
 /*footer styling exceptions for mobiles*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {						/*mobile*/
 	img#footerLogo {
 		width: 8vw;
 		padding-top: 1.3vw;
