@@ -82,7 +82,7 @@ img#headerLogoBigScreen {
 	left: 0vw;
 	width: 5.2vw;
 	display: inline-block;
-	margin-top: -1.3vw;
+	margin-top: -1.1vw;
 }
 
 img#headerLogoMobile {
@@ -199,7 +199,12 @@ ul li ul li a:active {
 
 	ul li {
 		font-size: 1.2vw;
-	}                                         
+	}  
+	
+	ul li ul {
+		  top: 2.15vw;	
+	}
+
 	ul li ul li {
 		width: 13vw;
 	}
@@ -293,7 +298,7 @@ ul li ul li a:active {
 	}
 	img#headerLogoMobile {
 		display: inline-block;
-		width: 15vw;
+		width: 15.2vw;
 		position: relative;
 		margin-bottom: -0.5vw;
 	}
@@ -306,17 +311,18 @@ ul li ul li a:active {
 	}
 	nav {
 		position: absolute;
-		top: 33.5vw;
+		top: 33.8vw;
 		left: 50vw;
 		text-align: left;
 		width: 50%;
 		height: auto;
-		visibility: hidden; 
+		visibility: hidden;
 		padding-top: 0;
 		margin-top: 0;
 	}
 	ul {
 		padding-top: 0;
+		margin-top: 0;
 	}
 	ul li {
 		display: block;
@@ -428,6 +434,27 @@ main {
 	display: none;
 }
 
+.events_table_wrapper1 {
+	background-image: url("../images/events1-alice-butenko-unsplash.jpg");
+}
+
+.events_table_wrapper2 {
+	background-image: url("../images/events2-magicpattern-unsplash.jpg");
+}
+
+.events_table_wrapper3 {
+	background-image: url("../images/events3-max-williams-unsplash.jpg")
+}
+
+.events_table_wrapper {
+		
+	background-repeat: repeat; 
+  	background-size: cover; 
+	background-color: #fafafa;
+	height: 70vw;																				/*increase height for more events*/
+}
+
+
 div.newsletter_background_pc {
 	background-image: url("../images/flower_field_pc.jpg");
 	background-repeat: no-repeat; 
@@ -467,7 +494,11 @@ div.newsletter_background_pc {
   #stage_tablet img:nth-of-type(n+3) {
     display: none;
   }
-  
+
+  .events_table_wrapper {
+	height: 90vw;																			/*increase height for more events*/
+	}
+
   div.newsletter_background_tablet {
 	background-image: url("../images/flower_field_tablet.jpg");
 	background-repeat: no-repeat; 
@@ -515,6 +546,11 @@ div.newsletter_background_pc {
   background-size: cover; 
 	background-color: white;
 	}
+
+	.events_table_wrapper {
+	height: 120vw;															/*increase height for more events*/
+}
+	
 }
 
 /*image fade*/
@@ -523,7 +559,7 @@ div.newsletter_background_pc {
 	to   { opacity: 0.0; }
 }
 
-/*table styling*/
+/*table styling for church services*/
 div.info-table {
 	width: 44%;
 	font-family: Acumin-pro, sans-serif;
@@ -535,14 +571,70 @@ div.info-table {
 	color: #584632;
 }
 
+/*table styling for events*/
+div.events-table {
+	width: 60%;
+	font-family: Acumin-pro, sans-serif;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 8vw;
+	left: 19vw;
+	margin-bottom: 1vw;
+	margin-top: 1vw;
+	color: #584632;
+	background-color: #fafafa;
+	box-shadow: inset 2px -2px 3px #584632, 2px -2px 3px white;
+	border-radius: 1vw;
+}
+
+.event_arrow {
+	font-size: 2.5rem;
+	font-weight: bold;
+	border: 1px solid #abcacd;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	padding: .4rem;
+	display: inline;
+	position: absolute;
+	text-align: center;
+}
+
+.back_arrow {
+	top: 5vw;
+	left: 1.5vw;
+}
+
+.forward_arrow {
+	top: 5vw;
+	right: 1.5vw;
+}
+
+.event_arrow a:link, .event_arrow a:visited {
+	color: darkslateblue;
+}
+
+.event_arrow a:hover {
+	color: dodgerblue;
+}
+
+.event_arrow a:active {
+	color: #e9982f;
+}
+
 hr {
 	border: 2px solid rgba(233, 152, 47, 1);
 	margin-bottom: 3vw;
 }
 
 
-div.info-table table {
+div.info-table table{
 	width: 100%;
+}
+
+div.events-table table {
+	width: 80%;
+	margin: 1vw auto 2vw auto;
 }
 
 td.time {
@@ -557,7 +649,7 @@ td.church {
 	width: 40%;
 }
 
-div.info-table caption {
+div.info-table caption, div.events-table caption {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-top: 0.5rem;
@@ -565,7 +657,7 @@ div.info-table caption {
 	text-align: left;
 }
 
-div.info-table td {
+div.info-table td, div.events-table td {
 	padding: 5px;
 	padding-left: 10px;
 }
@@ -588,6 +680,12 @@ td:not(.emptyRow) {
 	div.info-table {
 		width: 60%;
 	}
+
+	div.events-table {
+		width: 80%;
+		left: 9vw;
+		top: 9vw;
+	}
 }
 
 /*table styling exceptions for tablets*/
@@ -596,6 +694,14 @@ td:not(.emptyRow) {
 		width: 80%;
 		font-size: 1.5rem;
 	}
+
+	div.events-table {
+		width: 90%;
+		left: 4vw;
+		top: 12vw;
+	}
+
+
 	hr {
 	border: 1px solid rgba(233, 152, 47, 1);
 	margin-bottom: 4vw;
@@ -603,14 +709,16 @@ td:not(.emptyRow) {
 	div.info-table table {
 		width: 100%;
 	}
-	div.info-table caption {
+	div.info-table caption, div.events-table {
 		font-size: 1.5rem;
 	}
-	div.info-table td {
+	div.info-table td, div.events-table td {
 		padding: 3px;
 		padding-left: 5px;
 		font-size: 1.3rem;
-	}	
+	}
+	
+
 }
 
 /*table styling exceptions for mobiles portrait*/	
@@ -618,22 +726,43 @@ td:not(.emptyRow) {
 	div.info-table {
 		width: 90%;
 		font-size: 1.2rem;
-	}	
+	}
+
+	div.events-table {
+		font-size: 1.2rem;
+	}
+	
 	hr {
 	margin-bottom: 5vw;
 	}
 	div.info-table table {
 		width: 100%;
 	}
-	div.info-table caption {
+	div.info-table caption, div.events-table caption {
 		font-size: 1.2rem;
 	}
-	div.info-table td {
+	div.info-table td, div.events-table td {
 		padding: 3px;
 		padding-left: 5px;
 		vertical-align: bottom;
 		font-size: 1.2rem;
-	}	
+	}
+	
+	.event_arrow {
+		font-size: 1.5rem;
+		width: 2rem;
+		height: 2rem;
+		padding: .4rem;
+	}
+	.back_arrow {
+		top: 12vw;
+
+	}
+	
+	.forward_arrow {
+		top: 12vw;
+
+	}
 }
 
 /*article styling*/  
@@ -681,7 +810,7 @@ span.article-link a {
 		font-family: Acumin-pro, sans-serif;
 }
 span.article-link a:link, span.article-link a:visited {
-	color: blue;
+	color: darkslateblue;
 }
 span.article-link a:hover {
 	color: dodgerblue;
