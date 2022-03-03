@@ -291,7 +291,8 @@ ul li ul li a:active {
 		line-height:1.2;
 	}	
 	header span {
-	  margin-top: 2vw;	
+	  margin-top: 2vw;
+		margin-bottom: 0.2vw;		
 	}
 	img#headerLogoBigScreen {	
 		display: none;
@@ -299,6 +300,7 @@ ul li ul li a:active {
 	img#headerLogoMobile {
 		display: inline-block;
 		width: 15.2vw;
+		width: 15vw;
 		position: relative;
 		margin-bottom: -0.5vw;
 	}
@@ -357,10 +359,10 @@ ul li ul li a:active {
 		left: -50vw;
 	}
 	ul li ul#dropDown1 {
-		top: -11.7vw;
+		top: -11.4vw;
 	}
 	ul li ul#dropDown2 {
-		top: -22.4vw;
+		top: -22.1vw;
 	}
 	ul li ul li {
 		width: 50vw;
@@ -448,10 +450,10 @@ main {
 
 .events_table_wrapper {
 		
-	background-repeat: repeat; 
-  	background-size: cover; 
+	background-repeat: repeat-y; 
+  	background-size: 100%; 
 	background-color: #fafafa;
-	height: 70vw;																				/*increase height for more events*/
+	height: 70vw;																				/*increase height for more events - pc*/
 }
 
 
@@ -496,7 +498,7 @@ div.newsletter_background_pc {
   }
 
   .events_table_wrapper {
-	height: 90vw;																			/*increase height for more events*/
+	height: 90vw;																			/*increase height for more events - tablets*/
 	}
 
   div.newsletter_background_tablet {
@@ -548,7 +550,7 @@ div.newsletter_background_pc {
 	}
 
 	.events_table_wrapper {
-	height: 120vw;															/*increase height for more events*/
+	height: 120vw;															/*increase height for more events - mobile*/
 }
 	
 }
@@ -729,7 +731,8 @@ td:not(.emptyRow) {
 	}
 
 	div.events-table {
-		font-size: 1.2rem;
+		font-size: 1rem;
+		width: 90%;
 	}
 	
 	hr {
@@ -738,14 +741,26 @@ td:not(.emptyRow) {
 	div.info-table table {
 		width: 100%;
 	}
-	div.info-table caption, div.events-table caption {
+	div.info-table caption {
 		font-size: 1.2rem;
 	}
-	div.info-table td, div.events-table td {
+	
+	div.events-table caption {
+		font-size: 1rem;
+	}
+	
+	div.info-table td {
 		padding: 3px;
 		padding-left: 5px;
 		vertical-align: bottom;
 		font-size: 1.2rem;
+	}
+	
+	div.events-table td {
+		padding: 3px;
+		padding-left: 5px;
+		vertical-align: bottom;
+		font-size: 1rem;
 	}
 	
 	.event_arrow {
@@ -753,15 +768,16 @@ td:not(.emptyRow) {
 		width: 2rem;
 		height: 2rem;
 		padding: .4rem;
+		border: none;
 	}
 	.back_arrow {
 		top: 12vw;
-
+		left: 0;
 	}
 	
 	.forward_arrow {
 		top: 12vw;
-
+		right: 0;
 	}
 }
 
